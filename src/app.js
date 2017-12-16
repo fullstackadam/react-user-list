@@ -38,6 +38,6 @@ const jsx = (
   </Provider>
 );
 
-store.dispatch(setTextFilter('j'));
+//store.dispatch(setTextFilter('j'));
 
 ReactDOM.render(jsx, document.getElementById('app'));
