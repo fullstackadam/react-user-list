@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import selectUsers from '../selectors/users';
+import UserListItem from './UserListItem';
 
 const UserList = (props) => (
   <div>
-    {props.users.map((user) => <p key={user.id}>{user.firstName} {user.lastName}</p>)}
+    {props.users.map((user) => <UserListItem key={user.id} {...user} />)}
   </div>
 );
 
