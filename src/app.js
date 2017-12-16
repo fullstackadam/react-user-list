@@ -4,8 +4,7 @@ import { Provider } from 'react-redux';
 import configureStore from './store/configure';
 import { addUser } from './actions/users';
 import setTextFilter from './actions/filters';
-import Header from './components/Header';
-import UserList from './components/UserList';
+import AppRouter from './routers/AppRouter';
 import 'normalize.css/normalize.css';
 
 const store = configureStore();
@@ -33,18 +32,9 @@ store.dispatch(
   )
 );
 
-
-
-const App = () => (
-  <div>
-    <Header />
-    <UserList />
-  </div>
-);
-
 const jsx = (
   <Provider store={store}>
-    <App />
+    <AppRouter />
   </Provider>
 );
 
