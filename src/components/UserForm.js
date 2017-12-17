@@ -6,12 +6,12 @@ export default class UserForm extends React.Component {
     super(props);
 
     this.state = {
-      firstName: props.user.firstName ? props.user.firstName : '',
-      lastName: props.user.lastName ? props.user.lastName : '',
-      address: props.user.address ? props.user.address : '',
-      city: props.user.city ? props.user.city : '',
-      state: props.user.state ? props.user.state : '',
-      zip: props.user.zip ? props.user.zip : '',
+      firstName: props.user ? props.user.firstName : '',
+      lastName: props.user ? props.user.lastName : '',
+      address: props.user ? props.user.address : '',
+      city: props.user ? props.user.city : '',
+      state: props.user ? props.user.state : '',
+      zip: props.user ? props.user.zip : '',
       error: ''
     };
   }

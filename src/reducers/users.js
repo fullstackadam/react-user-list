@@ -3,7 +3,11 @@ const usersReducerDefaultState = [];
 export default (state = usersReducerDefaultState, action) => {
   switch (action.type) {
     case 'ADD_USER':
-      return state.concat(action.user);
+      if (!action.user.firstName || !action.user.city || !action.user.state) {
+        return state;
+      } else {
+        return state.concat(action.user);
+      }
       break;
     case 'REMOVE_USER':
       return state.filter(({ id }) =>  id !== action.id);
