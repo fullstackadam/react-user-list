@@ -24,9 +24,6 @@ Final:
 
 Go to http://localhost:8080/ in your web browser
 
-You should see this:
-
-
 
 # License
 
