@@ -1,5 +1,13 @@
 # User List
 
+Initial Mockup:
+
+![alt text](https://raw.githubusercontent.com/fullstackadam/react-user-list/master/mockup.JPG)
+
+Final:
+
+![alt text](https://raw.githubusercontent.com/fullstackadam/react-user-list/master/screenshot.png)
+
 
 # Dependencies
 
@@ -10,7 +18,7 @@
 ```
 > git clone https://github.com/fullstackadam/react-user-list.git
 > cd react-user-list
-> npm install
+> yarn
 > yarn run dev-server
 ```
 
