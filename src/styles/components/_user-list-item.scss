@@ -1,0 +1,22 @@
+.user-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .user-list-item__buttons a {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .user-list-item__text {
+    font-size: .9rem;
+  }
+}
+
+
+.user-list-item__buttons a {
+  display: block;
+}

@@ -5,7 +5,7 @@ import UserListItem from './UserListItem';
 
 const UserList = (props) => (
   <div>
-    {props.users.map((user) => <UserListItem key={user.id} {...user} />)}
+    {props.users.map((user) => <div key={user.id}><UserListItem {...user} /><hr /></div>)}
   </div>
 );
 

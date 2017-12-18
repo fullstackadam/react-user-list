@@ -4,12 +4,16 @@ import { connect } from 'react-redux';
 import { editUser } from '../actions/users';
 
 const EditUserPage = (props) => (
-  <UserForm
-    user={props.user}
-    onSubmit={(user) => {
-    props.dispatch(editUser(props.user.id, user));
-    props.history.push('/');
-  }}/>
+  <div>
+    <h1 className="title-margin-top">Edit User</h1>
+    <UserForm
+      user={props.user}
+      buttonText="Update"
+      onSubmit={(user) => {
+      props.dispatch(editUser(props.user.id, user));
+      props.history.push('/');
+    }}/>
+  </div>
 );
 
 const mapStateToProps = (state, props) => {

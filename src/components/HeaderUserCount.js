@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import selectUsers from '../selectors/users';
 
-const Header = ({ userCount }) => (
+const HeaderUserCount = ({ userCount }) => (
   <header>
     <div>
       <h1>USERS ({userCount})</h1>
@@ -16,4 +16,4 @@ const mapStateToProp = (state) => {
   };
 };
 
-export default connect(mapStateToProp)(Header);
+export default connect(mapStateToProp)(HeaderUserCount);

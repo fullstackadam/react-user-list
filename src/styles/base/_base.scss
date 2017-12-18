@@ -1,0 +1,38 @@
+.input-group {
+  margin-top: 10px;
+}
+
+.btn-success {
+  background: $green;
+  border: none;
+}
+
+.btn-success:hover {
+  background: darken($green, 20%);
+}
+
+.btn-warning {
+  background: $yellow;
+  border: none;
+}
+
+.btn-warning:hover {
+  background: darken($yellow, 30%);
+}
+
+.btn-danger {
+  background: $purple;
+  border: none;
+}
+
+.btn-danger:hover {
+  background: darken($purple, 20%);
+}
+
+.remove-link-decoration:hover {
+  text-decoration: none;
+}
+
+.title-margin-top {
+  margin-top: 14px;
+}

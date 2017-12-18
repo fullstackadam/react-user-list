@@ -1,5 +1,7 @@
 import React from 'react';
 import moment from 'moment';
+import { InputGroup, InputGroupAddon, Input, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export default class UserForm extends React.Component {
   constructor(props) {
@@ -67,60 +69,69 @@ export default class UserForm extends React.Component {
   render() {
     return (
       <div>
-        {!this.state.error || <p>{this.state.error}</p>}
-        <form onSubmit={this.onSubmit}>
-          <div>
-            <input
-              type="text"
-              name="firstName"
-              placeholder="First Name"
-              value={this.state.firstName}
-              onChange={this.onFirstNameChange}
-            />
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Last Name"
-              value={this.state.lastName}
-              onChange={this.onLastNameChange}
-            />
+        <div className="row">
+          <div className="col-md-12">
+            {!this.state.error || <p>{this.state.error}</p>}
+            <form onSubmit={this.onSubmit}>
+              <div>
+              <InputGroup>
+                <Input
+                  placeholder="First Name"
+                  value={this.state.firstName}
+                  onChange={this.onFirstNameChange}
+                />
+                <Input
+                  placeholder="Last Name"
+                  value={this.state.lastName}
+                  onChange={this.onLastNameChange}
+                />
+              </InputGroup>
+              <InputGroup>
+                <Input
+                  placeholder="Street Address"
+                  value={this.state.address}
+                  onChange={this.onAddressChange}
+                />
+              </InputGroup>
+              <InputGroup>
+                <Input
+                  placeholder="City"
+                  value={this.state.city}
+                  onChange={this.onCityChange}
+                />
+                <Input
+                  placeholder="State"
+                  maxLength={2}
+                  value={this.state.state}
+                  onChange={this.onStateChange}
+                />
+                <Input
+                  placeholder="Zipcode"
+                  maxLength={5}
+                  value={this.state.zip}
+                  onChange={this.onZipChange}
+                />
+              </InputGroup>
+              <InputGroup>
+                <Button
+                  size="lg"
+                  color="success"
+                  block
+                >
+                  {this.props.buttonText.toUpperCase()}
+                </Button>
+              </InputGroup>
+              </div>
+            </form>
           </div>
-          <div>
-            <input
-              type="text"
-              name="streetAddress"
-              placeholder="Street Address"
-              value={this.state.address}
-              onChange={this.onAddressChange}
-            />
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+          <p style={{ marginTop: '10px' }}>
+            <Link to="/">Back to User List</Link>
+          </p>
           </div>
-          <div>
-            <input
-              type="text"
-              name="city"
-              placeholder="City"
-              value={this.state.city}
-              onChange={this.onCityChange}
-            />
-            <input
-              type="text"
-              name="state"
-              placeholder="State"
-              value={this.state.state}
-              onChange={this.onStateChange}
-            />
-            <input
-              type="text"
-              name="zipcode"
-              placeholder="Zipcode"
-              value={this.state.zip}
-              onChange={this.onZipChange}
-            />
-          </div>
-          <div>
-            <button>UPDATE</button>
-          </div>
-        </form>
+        </div>
       </div>
     );
   }
