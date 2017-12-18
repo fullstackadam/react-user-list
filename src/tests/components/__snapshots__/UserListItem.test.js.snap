@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render UserListItem with user 1`] = `
+<Connect(UserListItem)
+  address="123 Fake Street"
+  city="Denver"
+  createdAt="fhgfhfg"
+  firstName="Adam"
+  id="a"
+  lastName="McMahon"
+  state="CO"
+  zip="12345"
+/>
+`;
